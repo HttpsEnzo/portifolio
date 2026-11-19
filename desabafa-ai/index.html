@@ -183,6 +183,7 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
 .who{flex:1;min-width:0}
 .who b{display:block;font-size:17px}
 .who span{display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--muted)}
+.who span.off::before{background:var(--muted-2)}
 .who span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ok)}
 .help-pill{display:flex;align-items:center;gap:6px;padding:9px 12px;border-radius:999px;background:rgba(213,180,255,.14);color:var(--lav);font-weight:700;font-size:13.5px;flex:none}
 .help-pill svg{width:18px;height:18px}
@@ -218,6 +219,77 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
 .input-wrap{flex:1;background:var(--surface-2);border-radius:26px;padding:4px 18px;min-height:50px;display:flex;align-items:center}
 .input-wrap textarea{width:100%;resize:none;border:0;outline:none;background:transparent;font-size:16px;line-height:1.4;max-height:120px;padding:10px 0}
 .input-wrap textarea::placeholder{color:var(--muted-2)}
+
+/* ---------- Abas (Início / Premium) ---------- */
+.screen.tabbed{padding-bottom:0}
+.tabbar{display:flex;margin:0 -22px;padding:8px 22px calc(var(--safe-b) + 8px);border-top:1px solid var(--line);background:var(--bg)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;font-size:12.5px;font-weight:700;color:var(--muted-2);border-radius:14px}
+.tab svg{width:26px;height:26px}
+.tab.on{color:var(--lav)}
+.label{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);margin:26px 0 10px}
+
+/* ---------- Início ---------- */
+.home-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:6px 0 18px}
+.eyebrow{margin:0 0 4px;font-weight:800;font-size:15px;color:var(--muted)}
+.eyebrow span{color:var(--lav)}
+.home-head h1{margin:0;font-size:28px}
+.plan-pill{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line-2);font-size:13px;font-weight:700;color:var(--muted);flex:none}
+.plan-pill svg{width:16px;height:16px}
+.plan-pill.pro{background:rgba(213,180,255,.16);color:var(--lav);box-shadow:inset 0 0 0 1px rgba(213,180,255,.4)}
+.new-card{display:flex;align-items:center;gap:14px;width:100%;padding:18px;border-radius:24px;text-align:left;
+  background:linear-gradient(135deg,#3a2958,#2a1f40);box-shadow:inset 0 0 0 1px var(--line-2),0 16px 40px -20px rgba(154,99,231,.8)}
+.new-card .nc-ico{width:52px;height:52px;border-radius:16px;background:rgba(213,180,255,.14);display:grid;place-items:center;color:var(--lav);flex:none}
+.new-card .nc-ico svg{width:36px;height:29px}
+.new-card .nc-txt{flex:1;min-width:0}
+.new-card b{display:block;font-size:17px;margin-bottom:3px}
+.new-card .nc-txt span{color:var(--muted);font-size:14px;line-height:1.4}
+.new-card .nc-go{width:42px;height:42px;border-radius:50%;background:var(--lav);color:var(--ink);display:grid;place-items:center;flex:none}
+.new-card .nc-go svg{width:22px;height:22px}
+.convs{display:flex;flex-direction:column}
+.conv{display:flex;align-items:center;gap:14px;width:100%;padding:12px 0;text-align:left;border-bottom:1px solid var(--line)}
+.conv:last-child{border-bottom:0}
+.conv:active{opacity:.7}
+.conv .av{width:58px;height:58px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#e7d4ff,#9a63e7);flex:none;position:relative}
+.conv .av svg{width:100%;height:100%;border-radius:50%}
+.conv .av.on::after{content:"";position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px var(--bg)}
+.conv .mid{flex:1;min-width:0}
+.conv .top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.conv .top b{font-size:16.5px}
+.conv .top time{font-size:12.5px;color:var(--muted-2);flex:none}
+.conv .topic{display:inline-block;margin:3px 0 4px;padding:2px 9px;border-radius:999px;background:rgba(213,180,255,.12);color:var(--lav);font-size:12px;font-weight:600;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.conv .row2{display:flex;align-items:center;gap:8px}
+.conv .prev{flex:1;min-width:0;color:var(--muted);font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conv.unread .prev{color:var(--text);font-weight:600}
+.conv .badge{min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--violet);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.conv .new{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--lav);padding:3px 8px;border-radius:999px}
+.empty{text-align:center;color:var(--muted);padding:30px 10px;font-size:15px;line-height:1.5}
+
+/* ---------- Premium ---------- */
+.pr-hero{padding:22px 20px;border-radius:26px;margin-top:8px;background:radial-gradient(120% 120% at 100% 0%,rgba(213,180,255,.28),rgba(213,180,255,0) 60%),linear-gradient(160deg,#33254d,#211a2f);box-shadow:inset 0 0 0 1px var(--line-2)}
+.pr-tag{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;background:var(--lav);color:var(--ink);font-weight:800;font-size:13px;margin-bottom:14px}
+.pr-tag svg{width:16px;height:16px}
+.pr-hero h1{font-size:26px;margin-bottom:10px}
+.pr-hero .lead{font-size:15.5px}
+.who-list{display:flex;flex-direction:column;gap:10px}
+.who-list .item{align-items:flex-start}
+.who-list .item svg{width:28px;height:28px;margin-top:2px}
+.who-list b{display:block;font-size:16px;margin-bottom:3px}
+.who-list span{display:block;color:var(--muted);font-size:14px;line-height:1.45}
+.cmp{border-radius:20px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;font-size:14.5px}
+.cmp .r{display:grid;grid-template-columns:1fr 74px 84px;align-items:center;border-top:1px solid var(--line)}
+.cmp .r:first-child{border-top:0;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-2)}
+.cmp .r>*{padding:13px 12px}
+.cmp .r>*:not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+.cmp .r>*:last-child{background:rgba(213,180,255,.08);color:var(--lav);font-weight:700}
+.cmp .r:first-child>*:last-child{color:var(--lav)}
+.cmp svg{width:18px;height:18px;margin:0 auto}
+.price{margin-top:22px;padding:20px;border-radius:24px;background:var(--surface-2);box-shadow:inset 0 0 0 1.5px rgba(213,180,255,.35);text-align:center}
+.price .amt{display:flex;align-items:baseline;justify-content:center;gap:4px}
+.price .amt b{font-size:38px;font-weight:800;letter-spacing:-.02em}
+.price .amt span{color:var(--muted);font-size:16px}
+.price p{color:var(--muted);font-size:14px;line-height:1.55;margin:6px 0 16px}
+.price p strong{color:var(--text)}
+.info{margin:4px 0 16px;padding:12px 14px;border-radius:14px;background:var(--surface);font-size:13.5px;color:var(--muted);line-height:1.5}
 
 /* ---------- Sheets ---------- */
 .scrim{position:absolute;inset:0;background:rgba(6,4,10,.6);opacity:0;visibility:hidden;transition:.3s;z-index:20}
@@ -279,7 +351,12 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
     <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></symbol>
     <symbol id="i-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.6 6.1A9.6 9.6 0 0 1 12 6c5 0 8.5 4 9.5 6-.4.9-1.3 2.2-2.6 3.4M6.6 7.6C4.6 8.9 3.2 10.7 2.5 12c1 2 4.5 6 9.5 6 1.6 0 3-.4 4.3-1.1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-chats" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M17 9.5c0-3.6-3.4-6.5-7.5-6.5S2 5.9 2 9.5c0 1.5.6 2.9 1.6 4L3 17l3.6-1.4c.9.3 1.9.4 2.9.4"/><path d="M12 15.5c0-2.8 2.7-5 6-5s5 2.2 5 5c0 1.2-.4 2.2-1.2 3.1l.7 2.6-2.8-1.1c-.6.2-1.1.3-1.7.3-3.3 0-6-2.2-6-4.9z"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></symbol>
+    <symbol id="i-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 12h8"/></symbol>
     <linearGradient id="g-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d1ff"/><stop offset="1" stop-color="#8e5ad8"/></linearGradient>
+    <linearGradient id="g-sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfe3ff"/><stop offset="1" stop-color="#6d6fd8"/></linearGradient>
+    <linearGradient id="g-mint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9f2dc"/><stop offset="1" stop-color="#5f9d9a"/></linearGradient>
     <linearGradient id="g-dusk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd7b0"/><stop offset="1" stop-color="#b36fd9"/></linearGradient>
   </defs>
 </svg>
@@ -333,7 +410,7 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
     </div>
     <div class="footer">
       <button class="btn" data-go="safety">Começar</button>
-      <button class="muted-link" data-toast="Login disponível na versão completa">Já tem uma conta? <b>Entrar</b></button>
+      <button class="muted-link" id="loginBtn">Já tem uma conta? <b>Entrar</b></button>
     </div>
   </section>
 
@@ -358,6 +435,65 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
       <p class="note">O Desabafa.ai é uma rede de apoio entre pares — não substitui atendimento clínico nem é um canal de emergência.</p>
     </div>
     <div class="footer"><button class="btn" data-go="feelings">Entendi</button></div>
+  </section>
+
+  <!-- Início: lista de conversas -->
+  <section class="screen tabbed" id="home" aria-label="Início">
+    <div class="home-head">
+      <div><p class="eyebrow">Desabafa<span>.ai</span></p><h1>Suas conversas</h1></div>
+      <button class="plan-pill" id="planPill" data-tab="premium"><svg><use href="#i-crown"/></svg><span>Grátis</span></button>
+    </div>
+    <div class="scroll">
+      <button class="new-card" id="newVent">
+        <span class="nc-ico"><svg viewBox="0 0 120 96"><use href="#i-logo"/></svg></span>
+        <span class="nc-txt"><b>Como você está agora?</b><span>Conte seu momento e encontre alguém que entende.</span></span>
+        <span class="nc-go" aria-hidden="true"><svg><use href="#i-plus2"/></svg></span>
+      </button>
+      <p class="label">Recentes</p>
+      <div class="convs" id="convList"></div>
+      <p class="note">Conversas anônimas: ninguém vê seu nome, foto ou redes sociais.</p>
+    </div>
+    <nav class="tabbar" aria-label="Navegação principal">
+      <button class="tab on" data-tab="home"><svg><use href="#i-chats"/></svg>Conversas</button>
+      <button class="tab" data-tab="premium"><svg><use href="#i-crown"/></svg>Premium</button>
+    </nav>
+  </section>
+
+  <!-- Premium -->
+  <section class="screen tabbed" id="premium" aria-label="Premium">
+    <div class="scroll">
+      <div class="pr-hero">
+        <span class="pr-tag"><svg><use href="#i-crown"/></svg>Desabafa+ Iniciante</span>
+        <h1>Pra quem quer ir além do primeiro desabafo</h1>
+        <p class="lead">Match e chat continuam grátis pra todo mundo. O plano Iniciante é pra quem já usa o app e quer um pouco mais.</p>
+      </div>
+      <p class="label">Pra quem é</p>
+      <div class="who-list">
+        <div class="item"><svg><use href="#i-chats"/></svg><div><b>Quem desabafa toda semana</b><span>Mais matches por dia, sem precisar esperar o dia seguinte.</span></div></div>
+        <div class="item"><svg><use href="#i-life"/></svg><div><b>Quem pensa em começar terapia</b><span>20% de desconto nas sessões com psicólogos parceiros do app.</span></div></div>
+        <div class="item"><svg><use href="#i-cap"/></svg><div><b>Quem vive uma fase específica</b><span>Temas como vestibular, TCC, primeiro emprego e mudança de cidade.</span></div></div>
+      </div>
+      <p class="label">Grátis × Iniciante</p>
+      <div class="cmp" role="table" aria-label="Comparação de planos">
+        <div class="r" role="row"><span></span><span>Grátis</span><span>Iniciante</span></div>
+        <div class="r" role="row"><span>Match e chat anônimo</span><span><svg><use href="#i-check"/></svg></span><span><svg><use href="#i-check"/></svg></span></div>
+        <div class="r" role="row"><span>Matches por dia</span><span>3</span><span>10</span></div>
+        <div class="r" role="row"><span>Temas de conversa</span><span>6</span><span>18</span></div>
+        <div class="r" role="row"><span>Desconto com psicólogos</span><span><svg><use href="#i-dash"/></svg></span><span>20%</span></div>
+        <div class="r" role="row"><span>Botão de ajuda e denúncia</span><span><svg><use href="#i-check"/></svg></span><span><svg><use href="#i-check"/></svg></span></div>
+      </div>
+      <div class="price">
+        <div class="amt"><b>R$ 9,90</b><span>/mês</span></div>
+        <p>7 dias grátis · cancele quando quiser<br><strong>Estudante?</strong> Com e-mail da faculdade sai por R$ 6,90.</p>
+        <button class="btn" id="trialBtn">Experimentar 7 dias grátis</button>
+      </div>
+      <p class="note">Segurança nunca é paga: botão de ajuda, denúncia e anonimato são iguais em todos os planos. Não vendemos dados pessoais.</p>
+      <button class="muted-link" style="width:100%;margin-bottom:10px" data-toast="Planos para faculdades e empresas em breve">Sua faculdade ou empresa pode oferecer o plano. <b>Saiba mais</b></button>
+    </div>
+    <nav class="tabbar" aria-label="Navegação principal">
+      <button class="tab" data-tab="home"><svg><use href="#i-chats"/></svg>Conversas</button>
+      <button class="tab on" data-tab="premium"><svg><use href="#i-crown"/></svg>Premium</button>
+    </nav>
   </section>
 
   <!-- 3. Sentimentos -->
@@ -396,27 +532,27 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
     <div class="scroll">
       <svg class="burst" viewBox="0 0 80 34" aria-hidden="true"><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M40 4v18M14 10l10 12M66 10L56 22"/></g></svg>
       <h1 style="margin-bottom:10px">Deu match! <svg style="display:inline;width:30px;height:30px;vertical-align:-4px;color:var(--violet)"><use href="#i-heartf"/></svg></h1>
-      <p class="lead">Você e <b style="color:var(--text)">@luna.s</b> estão passando por um momento parecido:</p>
+      <p class="lead">Você e <b style="color:var(--text)" class="m-handle">@luna.s</b> estão passando por um momento parecido:</p>
       <div class="reason"><svg id="reasonIcon"><use href="#i-cap"/></svg><div><small>Motivo do match</small><span id="reasonText">Sobrecarregadx com trabalho e estudos</span></div></div>
       <div class="pair" id="pair">
         <div class="person"><div class="avatar"><svg viewBox="0 0 120 120"><use href="#av-you"/></svg></div>Você</div>
         <span class="link-heart"><svg><use href="#i-heartf"/></svg></span>
-        <div class="person"><div class="avatar"><svg viewBox="0 0 120 120"><use href="#av-luna"/></svg></div>@luna.s</div>
+        <div class="person"><div class="avatar"><svg viewBox="0 0 120 120"><use class="m-av" href="#av-luna"/></svg></div><span class="m-handle">@luna.s</span></div>
       </div>
       <span class="anon-tip"><svg><use href="#i-eye"/></svg>Avatares ilustrados — ninguém vê seu rosto ou nome</span>
     </div>
     <div class="footer">
-      <button class="btn" data-go="chat"><svg><use href="#i-chat"/></svg>Começar a conversar</button>
+      <button class="btn" id="startChat"><svg><use href="#i-chat"/></svg>Começar a conversar</button>
       <button class="btn ghost" id="laterBtn">Talvez depois</button>
     </div>
   </section>
 
   <!-- 6. Chat -->
-  <section class="screen" id="chat" aria-label="Conversa com @luna.s">
+  <section class="screen" id="chat" aria-label="Conversa">
     <header class="chat-head">
       <button class="icon-btn" data-back aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
-      <div class="mini"><svg viewBox="0 0 120 120"><use href="#av-luna"/></svg></div>
-      <div class="who"><b>@luna.s</b><span id="status">Online</span></div>
+      <div class="mini"><svg viewBox="0 0 120 120"><use id="chatAv" href="#av-luna"/></svg></div>
+      <div class="who"><b id="chatHandle">@luna.s</b><span id="status">Online</span></div>
       <button class="help-pill" data-sheet="helpSheet" aria-label="Pedir ajuda profissional"><svg><use href="#i-life"/></svg>Ajuda</button>
       <button class="icon-btn" data-sheet="menuSheet" aria-label="Mais opções"><svg><use href="#i-dots"/></svg></button>
     </header>
@@ -490,6 +626,23 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
     </div>
   </div>
 
+  <div class="sheet" id="premiumSheet" role="dialog" aria-label="Teste grátis">
+    <div class="grab"></div>
+    <div data-step="ask">
+      <h3>Começar o teste grátis</h3>
+      <p>Você ganha 7 dias do plano Iniciante. Depois, R$ 9,90 por mês. Dá pra cancelar a qualquer momento na aba Premium.</p>
+      <div class="info">Isto é um protótipo: nenhum pagamento é feito.</div>
+      <button class="btn" id="confirmTrial"><svg><use href="#i-crown"/></svg>Ativar teste grátis</button>
+      <button class="btn ghost" data-close>Agora não</button>
+    </div>
+    <div data-step="ok" hidden class="done">
+      <div class="big"><svg><use href="#i-crown"/></svg></div>
+      <h3>Bem-vindx ao Iniciante</h3>
+      <p id="trialEnd">Seu teste vai até daqui a 7 dias.</p>
+      <button class="btn" data-close>Aproveitar</button>
+    </div>
+  </div>
+
   <div class="toast" id="toast" role="status"></div>
 
   <!-- Avatares ilustrados (anônimos) -->
@@ -513,6 +666,23 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
       <path d="M30 66c0-36 60-36 60 0" stroke="#c48a3a" stroke-width="5" fill="none"/>
       <rect x="25" y="62" width="11" height="20" rx="5.5" fill="#d99a45"/><rect x="84" y="62" width="11" height="20" rx="5.5" fill="#d99a45"/>
     </symbol>
+    <symbol id="av-nuvem" viewBox="0 0 120 120">
+      <rect width="120" height="120" fill="url(#g-sea)"/>
+      <path d="M18 120c2-24 20-38 42-38s40 14 42 38z" fill="#3d3f8f"/>
+      <ellipse cx="60" cy="64" rx="22" ry="26" fill="#f0c9ae"/>
+      <path d="M36 58c0-20 10-30 24-30s24 10 24 30c-6-8-14-12-24-12-6 0-16 4-24 12z" fill="#e9d36a"/>
+      <g stroke="#3a2a24" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M48 66q5 4 10 0M62 66q5 4 10 0"/><path d="M54 78q6 5 12 0"/></g>
+      <ellipse cx="47" cy="74" rx="5" ry="3" fill="#f2a7b0" opacity=".6"/><ellipse cx="73" cy="74" rx="5" ry="3" fill="#f2a7b0" opacity=".6"/>
+    </symbol>
+    <symbol id="av-cafe" viewBox="0 0 120 120">
+      <rect width="120" height="120" fill="url(#g-mint)"/>
+      <path d="M18 120c2-24 20-38 42-38s40 14 42 38z" fill="#f2efe6"/>
+      <circle cx="60" cy="24" r="13" fill="#5a3324"/>
+      <path d="M36 62c0-22 10-34 24-34s24 12 24 34z" fill="#5a3324"/>
+      <ellipse cx="60" cy="66" rx="22" ry="26" fill="#c98d68"/>
+      <path d="M38 58c4-14 12-20 22-20s18 6 22 20c-10-6-16-10-22-12-6 2-12 6-22 12z" fill="#5a3324"/>
+      <g stroke="#2a1a24" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M48 68q5 4 10 0M62 68q5 4 10 0"/><path d="M53 80q7 5 14 0"/></g>
+    </symbol>
   </svg>
 </main>
 </div>
@@ -523,35 +693,36 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
   /* ---------- Navegação ---------- */
-  const history = ['welcome'];
+  const stack = ['welcome'];
   let searchTimer;
   function show(id, {push = true} = {}) {
     const cur = $('.screen.active');
     if (cur && cur.id === id) return;
     if (cur) { cur.classList.add('leaving'); cur.classList.remove('active'); setTimeout(() => cur.classList.remove('leaving'), 400); }
-    const next = document.getElementById(id);
-    next.classList.add('active');
-    if (push) history.push(id);
+    document.getElementById(id).classList.add('active');
+    if (push) stack.push(id);
     onEnter(id);
   }
+  function root(id) { clearTimeout(searchTimer); stack.length = 0; stack.push(id); show(id, {push:false}); }
   function back() {
     clearTimeout(searchTimer);
-    if (history.length < 2) return;
-    history.pop();
-    let prev = history[history.length - 1];
-    if (prev === 'searching' || prev === 'match') { // nunca voltar para telas de transição
-      while (history.length > 1 && ['searching','match'].includes(history[history.length - 1])) history.pop();
-      prev = history[history.length - 1];
-    }
-    show(prev, {push: false});
+    const cur = $('.screen.active').id;
+    if (cur === 'chat' || cur === 'match') return root('home');
+    if (stack.length < 2) return;
+    stack.pop();
+    while (stack.length > 1 && ['searching','match'].includes(stack[stack.length - 1])) stack.pop();
+    show(stack[stack.length - 1], {push: false});
   }
   document.addEventListener('click', e => {
+    const tab = e.target.closest('[data-tab]'); if (tab) return root(tab.dataset.tab);
     const go = e.target.closest('[data-go]'); if (go) return show(go.dataset.go);
     if (e.target.closest('[data-back]')) return back();
     const sh = e.target.closest('[data-sheet]'); if (sh) return openSheet(sh.dataset.sheet);
     if (e.target.closest('[data-close]') || e.target.id === 'scrim') return closeSheets();
     const t = e.target.closest('[data-toast]'); if (t) return toast(t.dataset.toast);
   });
+  $('#loginBtn').addEventListener('click', () => root('home'));
+  $('#newVent').addEventListener('click', () => show('feelings'));
 
   /* ---------- Sentimentos ---------- */
   const FEELINGS = [
@@ -595,59 +766,136 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
     $('#searchTopic').textContent = f.topic;
     $('#reasonText').textContent = f.label;
     $('#reasonIcon').innerHTML = `<use href="#${f.icon}"/>`;
+    pendingFeeling = f;
     show('searching');
   });
 
-  /* ---------- Entrada nas telas ---------- */
-  let chatStarted = false;
-  function onEnter(id) {
-    if (id === 'searching') { clearTimeout(searchTimer); searchTimer = setTimeout(() => show('match'), 3600); }
-    if (id === 'match') { const p = $('#pair'); p.classList.remove('match-in'); void p.offsetWidth; p.classList.add('match-in'); if (navigator.vibrate) navigator.vibrate([20,40,20]); }
-    if (id === 'chat' && !chatStarted) { chatStarted = true; seedChat(); }
+  /* ---------- Conversas ---------- */
+  const now = () => new Date().toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const convs = [
+    {id:'nuvem', handle:'@nuvem.azul', av:'av-nuvem', topic:'Ansiedade e preocupação em excesso', online:false, when:'Ontem', unread:2, msgs:[
+      {t:'day', x:'Ontem'},
+      {t:'sys', x:'Vocês deram match por ansiedade e preocupação em excesso.'},
+      {t:'them', x:'Oi! Amanhã tenho apresentação e tô travadx só de pensar 😣', h:'21:14'},
+      {t:'me', x:'Te entendo demais. Já tentou ensaiar em voz alta? Me ajuda a sentir mais controle.', h:'21:16'},
+      {t:'them', x:'Vou tentar! Obrigadx por responder, sério.', h:'21:20'},
+      {t:'day', x:'Hoje'},
+      {t:'them', x:'Deu certo, viu? Consegui apresentar 🥹', h:'09:02'},
+      {t:'them', x:'Valeu pela dica de ontem 💜', h:'09:03'}]},
+    {id:'cafe', handle:'@cafe.e.livros', av:'av-cafe', topic:'Solidão ou sem rede de apoio', online:true, when:'Seg', unread:0, msgs:[
+      {t:'day', x:'Segunda'},
+      {t:'sys', x:'Vocês deram match por solidão ou sem rede de apoio.'},
+      {t:'them', x:'Mudei de cidade pra faculdade e ainda não conheço quase ninguém…', h:'19:40'},
+      {t:'me', x:'Passei por isso ano passado. Os primeiros meses são os mais difíceis, mas melhora.', h:'19:45'},
+      {t:'them', x:'Fico feliz de ouvir isso. Me conta como foi pra você?', h:'19:47'},
+      {t:'me', x:'Entrei num grupo de corrida da faculdade, ajudou muito!', h:'19:52'}]},
+  ];
+  const POOL = [{handle:'@luna.s', av:'av-luna'}, {handle:'@sol.ribeiro', av:'av-nuvem'}, {handle:'@mar.e.ondas', av:'av-cafe'}];
+  let current = null, pendingFeeling = null, pendingConv = null;
+
+  function preview(c) {
+    const m = [...c.msgs].reverse().find(m => m.t === 'me' || m.t === 'them');
+    if (!m) return 'Diga oi 👋';
+    return (m.t === 'me' ? 'Você: ' : '') + m.x;
   }
-  $('#laterBtn').addEventListener('click', () => { history.splice(history.indexOf('searching')); show('feelings', {push:false}); history.push('feelings'); toast('Tudo bem. Você escolhe o seu tempo.'); });
+  function renderHome() {
+    const list = $('#convList');
+    if (!convs.length) { list.innerHTML = '<p class="empty">Nenhuma conversa ainda.<br>Toque em “Como você está agora?” para encontrar alguém.</p>'; return; }
+    list.innerHTML = convs.map(c => `
+      <button class="conv${c.unread ? ' unread' : ''}" data-conv="${c.id}">
+        <span class="av${c.online ? ' on' : ''}"><svg viewBox="0 0 120 120"><use href="#${c.av}"/></svg></span>
+        <span class="mid">
+          <span class="top"><b>${esc(c.handle)}</b><time>${esc(c.when)}</time></span>
+          <span class="topic">${esc(c.topic)}</span>
+          <span class="row2"><span class="prev">${esc(preview(c))}</span>${c.isNew ? '<span class="new">Novo match</span>' : c.unread ? `<span class="badge">${c.unread}</span>` : ''}</span>
+        </span>
+      </button>`).join('');
+  }
+  $('#convList').addEventListener('click', e => { const b = e.target.closest('[data-conv]'); if (b) openConv(convs.find(c => c.id === b.dataset.conv)); });
+
+  function openConv(c) { current = c; c.unread = 0; c.isNew = false; show('chat'); }
+
+  /* ---------- Entrada nas telas ---------- */
+  function onEnter(id) {
+    if (id === 'home') renderHome();
+    if (id === 'searching') { clearTimeout(searchTimer); searchTimer = setTimeout(() => show('match'), 3600); }
+    if (id === 'match') {
+      const p = POOL.find(p => !convs.some(c => c.handle === p.handle)) || POOL[0];
+      const f = pendingFeeling || {label:'Um momento difícil'};
+      pendingConv = {id:'m' + Date.now(), handle:p.handle, av:p.av, topic:f.label, online:true, when:now(), unread:0, isNew:true,
+        msgs:[{t:'day', x:'Hoje'}, {t:'sys', x:`Vocês deram match por <b>${esc(f.label.toLowerCase())}</b>. Esta conversa é anônima. Seja gentil 💜`, html:true}]};
+      $$('.m-handle').forEach(el => el.textContent = p.handle);
+      $$('.m-av').forEach(el => el.setAttribute('href', '#' + p.av));
+      const pair = $('#pair'); pair.classList.remove('match-in'); void pair.offsetWidth; pair.classList.add('match-in');
+      if (navigator.vibrate) navigator.vibrate([20,40,20]);
+    }
+    if (id === 'chat') renderChat();
+  }
+  function acceptMatch() { if (pendingConv) { convs.unshift(pendingConv); const c = pendingConv; pendingConv = null; return c; } }
+  $('#startChat').addEventListener('click', () => { const c = acceptMatch(); stack.length = 0; stack.push('home'); if (c) openConv(c); });
+  $('#laterBtn').addEventListener('click', () => { acceptMatch(); root('home'); toast('Tudo bem. A conversa fica salva no início.'); });
 
   /* ---------- Chat ---------- */
   const msgs = $('#msgs'), input = $('#input'), sendBtn = $('#sendBtn');
-  const now = () => new Date().toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
-  const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  function add(html) { msgs.insertAdjacentHTML('beforeend', html); msgs.scrollTo({top: msgs.scrollHeight, behavior: 'smooth'}); return msgs.lastElementChild; }
-  function bubble(text, who, time = now()) {
-    return add(`<div class="bubble ${who}">${esc(text)}<div class="meta">${time}${who === 'me' ? '<svg><use href="#i-ticks"/></svg>' : ''}</div></div>`);
+  function msgHTML(m) {
+    if (m.t === 'day') return `<div class="day">${esc(m.x)}</div>`;
+    if (m.t === 'sys') return `<div class="sys">${m.html ? m.x : esc(m.x)}</div>`;
+    return `<div class="bubble ${m.t}">${esc(m.x)}<div class="meta">${m.h}${m.t === 'me' ? '<svg><use href="#i-ticks"/></svg>' : ''}</div></div>`;
   }
-  function seedChat() {
-    const topic = $('#reasonText').textContent.toLowerCase();
-    add('<div class="day">Hoje</div>');
-    add('<div class="sys">Vocês deram match por <b>' + esc(topic) + '</b>. Esta conversa é anônima. Seja gentil 💜</div>');
-    setTimeout(() => typingThen(`Oi! Vi que você também tá passando por isso… ${topic.includes('sobrecarreg') ? 'Tô exausta, parece que nunca dá tempo de nada, nem de descansar direito. 😮‍💨' : 'Tem sido bem difícil por aqui também. Como você tá? 💜'}`), 600);
+  function add(html) { msgs.insertAdjacentHTML('beforeend', html); msgs.scrollTo({top: msgs.scrollHeight, behavior: 'smooth'}); return msgs.lastElementChild; }
+  function push(c, m) { c.msgs.push(m); c.when = m.h || c.when; if (c === current && $('#chat').classList.contains('active')) add(msgHTML(m)); else if (m.t === 'them') c.unread++; }
+  function setStatus(txt, on = true) { const s = $('#status'); s.textContent = txt; s.classList.toggle('off', !on); }
+  function renderChat() {
+    const c = current; if (!c) return;
+    $('#chatHandle').textContent = c.handle;
+    $('#chatAv').setAttribute('href', '#' + c.av);
+    $('#chat').setAttribute('aria-label', 'Conversa com ' + c.handle);
+    setStatus(c.typing ? 'digitando…' : c.online ? 'Online' : 'Visto ontem', c.online);
+    msgs.innerHTML = c.msgs.map(msgHTML).join('') + (c.typing ? '<div class="typing" aria-label="digitando"><i></i><i></i><i></i></div>' : '');
+    msgs.scrollTop = msgs.scrollHeight;
+    chips.hidden = c.msgs.some(m => m.t === 'me');
+    input.value = ''; autosize(); sendBtn.disabled = true;
+    if (!c.seeded && c.isNewMatch !== false && !c.msgs.some(m => m.t === 'them' || m.t === 'me')) {
+      c.seeded = true;
+      const t = c.topic.toLowerCase();
+      setTimeout(() => typingThen(c, `Oi! Vi que você também tá passando por isso… ${t.includes('sobrecarreg') ? 'Tô exausta, parece que nunca dá tempo de nada, nem de descansar direito. 😮‍💨' : 'Tem sido bem difícil por aqui também. Como você tá? 💜'}`), 600);
+    }
   }
   const REPLIES = [
     'Nossa, faz muito sentido o que você falou. Você não tá sozinhx nisso. 💜',
     'Às vezes só colocar pra fora já alivia um pouco, né? Tô aqui pra ouvir.',
     'O que costuma te ajudar quando fica assim? Comigo, sair pra caminhar um pouco ajuda.',
     'Tenta pegar leve com você mesmx. Dá pra fazer uma coisa de cada vez.',
-    'É muito bom conversar com alguém que entende. Obrigada por compartilhar isso comigo.',
+    'É muito bom conversar com alguém que entende. Obrigadx por compartilhar isso comigo.',
     'Se quiser, me conta mais. Sem pressa.',
   ];
-  let ri = 0, busy = false;
-  function typingThen(text) {
-    busy = true;
-    $('#status').textContent = 'digitando…';
-    const t = add('<div class="typing" aria-label="digitando"><i></i><i></i><i></i></div>');
-    setTimeout(() => { t.remove(); bubble(text, 'them'); $('#status').textContent = 'Online'; busy = false; }, 1200 + Math.min(text.length * 18, 1600));
+  let ri = 0;
+  function typingThen(c, text) {
+    c.typing = true;
+    const here = () => c === current && $('#chat').classList.contains('active');
+    let el = null;
+    if (here()) { setStatus('digitando…'); el = add('<div class="typing" aria-label="digitando"><i></i><i></i><i></i></div>'); }
+    setTimeout(() => {
+      c.typing = false;
+      if (el) el.remove(); else $$('.typing', msgs).forEach(t => here() && t.remove());
+      push(c, {t:'them', x:text, h:now()});
+      if (here()) setStatus('Online');
+      if ($('#home').classList.contains('active')) renderHome();
+    }, 1200 + Math.min(text.length * 18, 1600));
   }
   const RISK = /(n[aã]o aguento mais|quero sumir|desistir de tudo|acabar com tudo|me machucar|me matar|morrer|sem sa[ií]da|n[aã]o vejo sentido)/i;
-  let careShown = false;
   function send(text) {
-    text = text.trim(); if (!text) return;
-    bubble(text, 'me');
+    text = text.trim(); if (!text || !current) return;
+    const c = current;
+    push(c, {t:'me', x:text, h:now()});
     input.value = ''; autosize(); sendBtn.disabled = true;
-    $('#chips').hidden = true;
-    if (RISK.test(text) && !careShown) {
-      careShown = true;
+    chips.hidden = true;
+    if (RISK.test(text) && !c.careShown) {
+      c.careShown = true;
       setTimeout(() => add(`<div class="care" role="note"><p>💜 Parece que as coisas estão bem pesadas agora. Quer conversar com um psicólogo parceiro? É anônimo e quem decide é você.</p><div class="row"><button class="yes" data-sheet="helpSheet">Quero ajuda</button><button class="no" onclick="this.closest('.care').remove()">Agora não</button></div></div>`), 500);
     }
-    if (!busy) setTimeout(() => typingThen(REPLIES[ri++ % REPLIES.length]), 900);
+    if (!c.typing) setTimeout(() => typingThen(c, REPLIES[ri++ % REPLIES.length]), 900);
   }
   function autosize() { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 120) + 'px'; }
   input.addEventListener('input', () => { autosize(); sendBtn.disabled = !input.value.trim(); });
@@ -661,9 +909,23 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
   $('#toggleChips').addEventListener('click', () => { chips.hidden = !chips.hidden; });
 
   $('#endChat').addEventListener('click', () => {
-    closeSheets(); msgs.innerHTML = ''; chatStarted = false; careShown = false;
-    history.length = 0; history.push('welcome', 'safety', 'feelings');
+    closeSheets();
+    const i = convs.indexOf(current); if (i > -1) convs.splice(i, 1);
+    current = null;
+    stack.length = 0; stack.push('home', 'feelings');
     show('feelings', {push:false}); toast('Conversa encerrada');
+  });
+
+  /* ---------- Premium ---------- */
+  let premium = false;
+  $('#trialBtn').addEventListener('click', () => premium ? toast('Seu teste grátis já está ativo') : openSheet('premiumSheet'));
+  $('#confirmTrial').addEventListener('click', () => {
+    premium = true;
+    const end = new Date(Date.now() + 7 * 864e5).toLocaleDateString('pt-BR', {day:'numeric', month:'long'});
+    $('#trialEnd').textContent = `Seu teste vai até ${end}. Aproveite os novos temas, os matches extras e o desconto com psicólogos.`;
+    step($('#premiumSheet'), 'ok');
+    const pill = $('#planPill'); pill.classList.add('pro'); pill.querySelector('span').textContent = 'Iniciante';
+    const tb = $('#trialBtn'); tb.textContent = 'Teste ativo até ' + end; tb.classList.add('outline');
   });
 
   /* ---------- Sheets ---------- */
@@ -679,7 +941,7 @@ h2{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.015em;margin:
 
   $('#callPsy').addEventListener('click', () => {
     const s = $('#helpSheet'); step(s, 'wait');
-    setTimeout(() => { step(s, 'ok'); if (chatStarted) add('<div class="sys">🛟 Você pediu apoio profissional. Uma psicóloga parceira vai te chamar em breve — seu anonimato continua.</div>'); }, 2200);
+    setTimeout(() => { step(s, 'ok'); if (current) push(current, {t:'sys', x:'🛟 Você pediu apoio profissional. Uma psicóloga parceira vai te chamar em breve. Seu anonimato continua.'}); }, 2200);
   });
 
   const REASONS = ['Desrespeito ou ofensa', 'Assédio ou conteúdo sexual', 'Pedido de dados pessoais', 'Spam ou golpe', 'Outro motivo'];
